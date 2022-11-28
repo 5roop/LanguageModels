@@ -32,7 +32,7 @@ def test(tokenizer, input_file):
         # Only do 5 sentences
         if idx > 4:
             break
-        sent = line.strip()
+        sent = line.strip()[:200]
 
         # Tokenize the sentence with our fresh tokenizer
         out = tokenizer.encode(sent)
