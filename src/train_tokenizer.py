@@ -43,7 +43,7 @@ def test(tokenizer, input_file):
         # But we want to see the actual pieces, so we have to do this:
         # Bit complicated because we have to go back to the original representation
         output = [decoder.decode(b) for b in out.tokens]
-        print (sent + '\n' + " ".join(output) + '\n')
+        print (sent + '\n' + " ".join((i[0] for i in output)) + '\n')
 
 
 def main():
